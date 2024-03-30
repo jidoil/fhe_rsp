@@ -1,0 +1,34 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a18cd1 0%, #fbc2eb 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.icon-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Adjust your icon size and placement as needed */
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 4px;
+    /* Add other styles for the title as needed */
+}
+
+.subtitle {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 16px;
+    /* Add other styles for the subtitle as needed */
+}

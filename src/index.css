@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* 위에서 아래로 진행되는 그라디언트를 설정합니다. */
+  background: linear-gradient(to bottom, #a18cd1 0%, #fbc2eb 100%);
+
+  /* 전체 페이지에 걸쳐 그라디언트가 적용되도록 합니다. */
+  height: 100vh;
+  margin: 0; /* 기본 마진 제거 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

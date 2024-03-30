@@ -1,0 +1,36 @@
+# 종속성
+/node_modules
+
+# 빌드된 파일
+/build
+/dist
+
+# 민감한 설정 파일
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE 설정
+.idea
+.vscode
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# 임시 파일
+.DS_Store
+Thumbs.db
+*.log
+
+# 특정한 빌드 시스템들의 캐시 파일
+.cache
+/coverage
+.nyc_output
+
+# OS generated files
+ehthumbs.db
+Icon?
+

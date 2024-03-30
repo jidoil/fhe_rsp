@@ -1,0 +1,3 @@
+.box:hover {
+    background-color: rgba(0, 0, 255, 0.5); /* 호버시 반투명 파란색으로 변경 */
+}
