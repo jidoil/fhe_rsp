@@ -22,8 +22,8 @@ function Box({ letter, isSelected, isHovered, onClick, onMouseEnter, onMouseLeav
         <div
             style={boxStyle}
             onClick={() => onClick(letter)}
-            onMouseEnter={() => onMouseEnter(letter)}
-            onMouseLeave={() => onMouseLeave()}
+            onMouseEnter={onMouseEnter ? () => onMouseEnter(letter) : undefined}
+                onMouseLeave={onMouseLeave ? () => onMouseLeave(letter) : undefined}
         >
             {letter}
         </div>

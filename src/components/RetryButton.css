@@ -1,0 +1,21 @@
+.retry-button {
+    padding: 10px 25px;
+    border-radius: 25px; /* 둥근 모서리 */
+    border: 2px solid white; /* 흰색 테두리 */
+    background-color: rgba(255, 255, 255, 0.2); /* 반투명 배경 */
+    color: white; /* 텍스트 색상 */
+    font-size: 16px; /* 텍스트 크기 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    outline: none; /* 클릭 시 발생하는 아웃라인 제거 */
+    cursor: pointer; /* 마우스 오버 시 커서 변경 */
+    transition: background-color 0.3s; /* 부드러운 배경 색상 변화 */
+}
+
+.retry-button:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* 마우스 오버 시 밝기 증가 */
+}
+
+.retry-button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 클릭 시 그림자 감소 */
+    transform: translateY(2px); /* 클릭 시 약간 아래로 이동 */
+}

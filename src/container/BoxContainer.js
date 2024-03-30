@@ -8,13 +8,11 @@ function BoxContainer() {
     const [hoveredBox, setHoveredBox] = useState(null);
 
     const handleBoxClick = (letter) => {
-        setSelectedBox(letter);
-
-        // 1초 후에 다른 페이지로 이동
-        setTimeout(() => {
-            navigate('/new-page');
-        }, 1000);
+        setSelectedBox(letter); // 플레이어의 선택을 상태에 저장
+        localStorage.setItem('playerChoice', letter); // 로컬 스토리지에 플레이어의 선택 저장
+        navigate('/result'); // 결과 페이지로 이동
     };
+
 
     const handleMouseEnter = (letter) => {
         setHoveredBox(letter);
@@ -24,19 +22,21 @@ function BoxContainer() {
         setHoveredBox(null);
     };
 
+    const boxes = ['R', 'S', 'P'].map((letter) => (
+        <Box
+            key={letter}
+            letter={letter}
+            isSelected={selectedBox === letter}
+            isHovered={hoveredBox === letter}
+            onClick={handleBoxClick}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        />
+    ));
+
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100vh', justifyContent: 'center' }}>
-            {['R', 'S', 'P'].map((letter) => (
-                <Box
-                    key={letter}
-                    letter={letter}
-                    isSelected={selectedBox === letter}
-                    isHovered={hoveredBox === letter}
-                    onClick={handleBoxClick}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                />
-            ))}
+            {selectedBox ? boxes.filter(box => box.key === selectedBox) : boxes}
         </div>
     );
 }
